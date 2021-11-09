@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #e9ecef;
+}
+body {
+  height: 100%;
+  background-color: #e9ecef;
+  margin-top: 2%;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  font-size: 3.5vh;
+  text-shadow: 1px 1px 3px black;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+div {
+  border-radius: 0.4vh;
+}
+.top,
+.navbar,
+.content,
+.footer {
+  width: 80vw;
+  background-color: #003566;
+  box-shadow: 0.1vh 0.1vh 1vh 0.1vh black;
+}
+
+/* TOP SECTION */
+.top {
+  height: 14vh;
+}
+
+/* MID SECTION */
+.middle {
+  width: 80vw;
+  height: 60vh;
+  margin-top: 2%;
+
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+}
+
+.navbar {
+  width: 20vw;
+  font-size: 3vh;
+}
+nav > ul {
+  margin-top: 5%;
+  transition: all 0.5s;
+}
+nav > ul:hover {
+  background-color: #0053a1a2;
+  font-size: 120%;
+  transition: all 0.3s ease-in;
+}
+ul > a {
+  margin-left: 5%;
+  user-select: none;
+  text-decoration: none;
+}
+ul > a:active {
+  color: yellow;
+}
+.content {
+  padding: 1%;
+  width: 80vw;
+}
+/* FOOTER SECTION */
+.footer {
+  height: 12vh;
+  margin-top: 2%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer > nav {
+  height: 60%;
+  width: 100%;
+  font-size: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer > nav > ul {
+  text-align: center;
+  width: 20%;
+  margin: 0%;
+  white-space: nowrap;
+}

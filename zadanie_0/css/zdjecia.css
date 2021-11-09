@@ -1,0 +1,42 @@
+.content > img {
+  max-width: 20%;
+  max-height: 20%;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 1px 1px 5px #0081fa;
+}
+.content > img:hover {
+  max-width: 30%;
+  max-height: 30%;
+  z-index: 3;
+  transition: z-index, max-width, max-height ease-in 0.15s;
+}
+#zdj1 {
+  margin-left: 4%;
+  margin-top: 2%;
+}
+
+#zdj2 {
+  margin-left: 8%;
+  margin-top: 6%;
+}
+
+#zdj3 {
+  margin-left: 12%;
+  margin-top: 10%;
+  z-index: 1;
+}
+
+#zdj4 {
+  margin-left: 16%;
+  margin-top: 14%;
+}
+#zdj5 {
+  margin-left: 33%;
+  max-height: 50vh;
+  max-width: 26vw;
+  margin-top: 2%;
+  height: 80%;
+  width: 90%;
+  opacity: 65%;
+}

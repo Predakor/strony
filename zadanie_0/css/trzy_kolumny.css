@@ -1,0 +1,27 @@
+.content {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.field {
+  width: 30%;
+  height: 100%;
+  font-size: 2vh;
+}
+
+.field > p {
+  text-align: start;
+  font-size: 1.1vw;
+  margin-right: 1%;
+  margin-top: 0;
+  word-wrap: break-word;
+}
+
+.field > img {
+  float: left;
+  width: 60%;
+  height: 28%;
+  margin-right: 3%;
+  margin-top: 1%;
+  box-shadow: 1px 1px 3px black;
+}
