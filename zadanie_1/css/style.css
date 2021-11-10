@@ -2,8 +2,7 @@
 :root {
   --div-color: #082032;
 }
-
-* {
+star * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -89,6 +88,7 @@ main {
 .right > p {
   text-align: justify;
   font-size: 1.2em;
+  word-break: break-all;
 }
 .right > img {
   width: 30%;
