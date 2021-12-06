@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+:root {
+  --font-color: orange;
+  --black: #1b1212;
+  --primary: #e5e5e5;
+  --secondary: ;
+  --third: ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--primary);
+  color: var(--font-color);
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+/* Navigation Section */
+nav {
+  height: 5vh;
+  width: 100%;
+  background-color: var(--black);
+  padding: 1%;
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 2%;
+}
+nav > div:first-child {
+  margin-right: auto;
+}
+.nav-button {
+  text-decoration: none;
+  color: var(--font-color);
+  transition: 0.3s ease-in;
+}
+.nav-button:hover {
+  color: red;
+  transition: 0.3s ease-in;
+}
+
+/* sections */
+section {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primary);
+  padding: 1%;
+  padding-top: 5vh;
+  float: left;
+}
+section:nth-child(2n + 1) {
+  background-color: darkcyan;
+}
+/* ============= */
+#homepage > main {
+  height: 100%;
+  padding: 1%;
+}
+.section-header {
+  height: 10%;
+  width: 100%;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.left,
+.right {
+  height: 100%;
+  width: 49%;
+}
+
+.left {
+  float: left;
+  margin-top: 3.5%;
+}
+
+.right {
+  height: 80%;
+  background-color: darkcyan;
+  margin-top: 2%;
+  padding: 1%;
+  float: right;
+}
+.right > h2 {
+  text-align: center;
+  font-size: calc(4em * 0.7);
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+.right > p {
+  text-align: justify;
+}
+
+/* ============= */
+#services > .section-header {
+  margin: 0;
+}
+
+/* ============= */
+#contact {
+  padding-top: 1vh;
+}
+
+#contact > main {
+  height: 100%;
+  width: 100%;
+  margin-top: 2%;
+}
+
+form {
+  height: 100%;
+  width: 25%;
+  float: left;
+}
+label {
+  display: block;
+  margin-top: 2%;
+  font-size: 1.5em;
+}
+input[type="email"],
+input[type="text"] {
+  border-radius: 0.5em;
+  padding: 0.5em;
+  width: 15em;
+}
+input[type="checkbox"] + label {
+  font-size: 1em;
+  display: inline-block;
+  margin: 0%;
+  padding: 0%;
+}
+textarea {
+  resize: none;
+  border-radius: 0.3em;
+  width: 100%;
+}
+fieldset {
+  width: fit-content;
+  padding: 2%;
+}
+
+.contact-holder {
+  width: 70%;
+  height: 100%;
+}
+
+/* Footer Section */
+footer {
+  height: 20vh;
+  width: 100%;
+  background-color: var(--black);
+  padding: 1%;
+  float: left;
+}
