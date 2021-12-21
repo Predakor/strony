@@ -1,247 +1,384 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 :root {
-    --font-color: orange;
-    --black: #1b1212;
-    --primary: #e5e5e5;
-    --secondary: ;
-    --third: ;
+  --font-color: orange;
+  --black: #1b1212;
+  --primary: #e5e5e5;
+  --secondary: darkcyan;
+  --third: ;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: darkcyan;
+  background: black;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    height: 100vh;
-    background-color: var(--primary);
-    color: var(--font-color);
-    font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: var(--primary);
+  color: var(--font-color);
+  font-family: "Poppins", sans-serif;
 }
 
 img {
-    max-height: 100%;
-    max-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
-
-
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
 /* Navigation Section */
 
 nav {
-    height: 5vh;
-    width: 100%;
-    background-color: var(--black);
-    padding: 1%;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    gap: 2%;
+  height: 5vh;
+  width: 100%;
+  background-color: var(--black);
+  position: fixed;
+  padding-inline: 1%;
+  top: 0;
 }
-
-nav>div:first-child {
-    margin-right: auto;
+.nav-left {
+  width: 30%;
+  height: 100%;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+.nav-right {
+  width: 70%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 2%;
 }
 
 .nav-button {
-    text-decoration: none;
-    color: var(--font-color);
-    transition: 0.3s ease-in;
+  width: 100%;
+  color: var(--font-color);
+  font-size: 1em;
+  text-decoration: none;
 }
-
-.nav-button:hover {
-    color: red;
-    transition: 0.3s ease-in;
+.nav-button::after {
+  content: "";
+  width: 0%;
+  height: 5%;
+  background: orange;
+  display: block;
+  position: absolute;
+  transition: 0.5s;
+  box-sizing: border-box;
 }
-
-
+.nav-button:hover::after {
+  width: 80px;
+  transition: 0.5s;
+}
+.x-button {
+  display: none;
+}
+#logo {
+  display: block;
+  float: left;
+}
 /* sections */
 
 section {
-    height: 100vh;
-    width: 100%;
-    background-color: var(--primary);
-    padding: 1%;
-    padding-top: 5vh;
-    float: left;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--secondary);
+  padding: 1%;
+  padding-top: 5vh;
+  float: left;
 }
 
-section:nth-child(2n+1) {
-    background-color: darkcyan;
+section:nth-child(2n + 1) {
+  background-color: var(--primary);
 }
-
 
 /* ============= */
 
-#homepage>main {
-    height: 100%;
-    padding: 1%;
+#homepage > main {
+  height: 100%;
+  padding: 1%;
 }
 
 .section-header {
-    height: 10%;
-    width: 100%;
-    font-size: 4em;
-    text-align: center;
-    margin-top: 1%;
+  height: 10%;
+  width: 100%;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 1%;
 }
 
 .left,
 .right {
-    height: 100%;
-    width: 49%;
+  height: 100%;
+  width: 49%;
 }
 
 .left {
-    float: left;
-    margin-top: 3.5%;
+  float: left;
+  margin-top: 3.5%;
 }
 
 .right {
-    height: auto;
-    min-height: 80%;
-    background-color: darkcyan;
-    margin-top: 2%;
-    padding: 1%;
-    border-radius: 1em;
-    float: right;
+  height: auto;
+  min-height: 80%;
+  background-color: var(--secondary);
+  margin-top: 2%;
+  padding: 1%;
+  border-radius: 1em;
+  float: right;
 }
 
-.right>h2 {
-    text-align: center;
-    font-size: calc(4em * 0.7);
-    margin-top: 1%;
-    margin-bottom: 3%;
+.right > h2 {
+  text-align: center;
+  font-size: calc(4em * 0.7);
+  margin-top: 1%;
+  margin-bottom: 3%;
 }
 
-.right>p {
-    font-size: calc(2.5em * 0.4);
-    text-align: justify;
+.right > p {
+  font-size: calc(2.5em * 0.4);
+  text-align: justify;
 }
-
 
 /* ============= */
 
-#services>main {
-    margin-top: 5%;
+#services > main {
+  margin-top: 5%;
+  height: 80%;
+  padding-inline: 5%;
 }
 
-#services>.section-header {
-    margin: 0;
+#services > .section-header {
+  margin: 0;
 }
 
 .service-block {
-    width: 20vw;
-    height: 20vw;
-    background-color: rgb(0, 102, 102);
-    box-shadow: 0px 0px 15px 1px rgb(0, 37, 37);
-    float: left;
-    border-radius: 1em 1em 0em 0em;
-    margin-left: 10%;
+  width: 30%;
+  height: 70%;
+  background-color: rgb(0, 102, 102);
+  color: rgb(238, 229, 229);
+  font-size: 1.3em;
+  text-align: center;
+  float: left;
+  border-radius: 1em 1em 0em 0em;
+  margin-left: 2%;
 }
 
 .service-description {
-    width: 100%;
-    text-align: center;
+  color: var(--font-color);
+  width: 100%;
+  font-size: 1.1em;
+  text-align: center;
+  padding-top: 5%;
 }
 
 .service-img {
-    width: 100%;
-    height: 40%;
-    background-color: orange;
-    border-radius: 1em 1em 0em 0em;
-    background-clip: border-box;
+  width: 100%;
+  height: 40%;
+  background-color: orange;
+  border-radius: 1em 1em 0em 0em;
+  background-clip: border-box;
+  padding-top: 5%;
 }
-
 
 /* ============= */
 
 #contact {
-    padding-top: 1vh;
+  padding-top: 3vh;
 }
 
-#contact>main {
-    height: 80%;
-    width: 100%;
-    margin-top: 2%;
+#contact > main {
+  height: 80%;
+  width: 100%;
+  margin-top: 5%;
 }
-
 .form-holder {
-    width: 40%;
+  width: 40%;
 }
 
 form {
-    height: 100%;
-    width: 60%;
-    float: left;
+  height: 100%;
+  width: 60%;
+  float: left;
 }
 
 label {
-    display: block;
-    margin-top: 2%;
-    font-size: 1.5em;
+  display: block;
+  margin-top: 2%;
+  font-size: 1.5em;
 }
 
 input[type="email"],
 input[type="text"] {
-    border-radius: 0.5em;
-    padding: 0.5em;
-    width: 15em;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  width: 15em;
 }
 
-input[type="checkbox"]+label {
-    font-size: 1em;
-    display: inline-block;
-    margin: 0%;
-    padding: 0%;
+input[type="checkbox"] + label {
+  font-size: 1em;
+  display: inline-block;
+  margin: 0%;
+  padding: 0%;
 }
 
 textarea {
-    resize: none;
-    border-radius: 0.3em;
-    width: 100%;
+  resize: none;
+  border-radius: 0.3em;
+  width: 100%;
 }
 
 fieldset {
-    width: fit-content;
-    padding: 2%;
+  width: fit-content;
+  padding: 2%;
 }
 
 .contact-holder {
-    width: 70%;
-    height: 100%;
-    float: right;
+  width: 60%;
+  height: 80%;
+  background: var(--secondary);
+  border-radius: 1em;
+  padding: 1%;
+  float: right;
 }
-
+.contact-row {
+  width: 100%;
+  margin-block: 1%;
+  float: left;
+}
+.contact-row {
+  font-size: 2em;
+  transition: ease-out 0.5s;
+  padding-block: 1%;
+}
+.contact-row:hover {
+  background: rgba(139, 179, 192, 0.685);
+  transition: ease-in 0.3s;
+}
 
 /* Footer Section */
 
 footer {
-    height: 20vh;
+  height: 20vh;
+  width: 100%;
+  background-color: var(--black);
+  padding: 1%;
+  float: left;
+}
+
+/* util classes */
+
+.shadow {
+  box-shadow: 0px 10px 25px 0px rgba(0, 37, 37, 0.4);
+}
+
+.hidden {
+  opacity: 0;
+  transition: 0.5s;
+  left: 100%;
+}
+
+/* mobile view */
+@media only screen and (max-width: 600px) {
+  section {
     width: 100%;
-    background-color: var(--black);
-    padding: 1%;
+    height: fit-content;
+    padding-block: 5%;
+  }
+  main {
+    width: 100%;
+    padding-inline: 1%;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  nav {
+    width: 50%;
+    height: 20%;
+    left: 80%;
+    justify-content: center;
+    clear: both;
+    padding-top: 5%;
+    transition: all 1s;
+    opacity: 80%;
+  }
+  .nav-left,
+  .nav-right {
+    width: 100%;
+    height: 20%;
+  }
+  .nav-right {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5%;
+  }
+
+  .x-button {
+    display: block;
+    position: absolute;
+    width: 5%;
+    height: 3%;
+    left: 95%;
+    z-index: 1;
+    margin-top: 1%;
+    margin-right: 1%;
+    float: right;
+    position: fixed;
+  }
+
+  #homepage {
+    background-image: url(../img/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #homepage > main > .left {
+    display: none;
+  }
+  #homepage > .section-header {
+    font-size: 3em;
+  }
+
+  .service-block {
+    width: 100%;
+    height: 60vh;
     float: left;
+    margin: 5% 0%;
+  }
+  .contact-holder {
+    display: none;
+  }
+  .form-holder {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
 }
